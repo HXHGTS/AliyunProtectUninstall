@@ -1,5 +1,9 @@
 #!/bin/sh
 
+rm -rf uninstall.sh
+
+rm -rf quartz_uninstall.sh
+
 wget http://update.aegis.aliyun.com/download/uninstall.sh
 
 chmod +x uninstall.sh
@@ -41,4 +45,10 @@ iptables -I INPUT -s 140.205.225.205/32 -j DROP
 /usr/local/cloudmonitor/wrapper/bin/cloudmonitor.sh remove
 
 rm -rf /usr/local/cloudmonitor
+
+rm -rf uninstall.sh
+
+rm -rf quartz_uninstall.sh
+
+
 
