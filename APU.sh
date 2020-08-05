@@ -50,5 +50,5 @@ rm -rf uninstall.sh
 
 rm -rf quartz_uninstall.sh
 
-
+reboot
 
