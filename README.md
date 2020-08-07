@@ -4,3 +4,5 @@
 一键卸载:
 
 wget https://raw.githubusercontent.com/HXHGTS/AliyunProtectUninstall/master/APU.sh && sudo bash APU.sh
+
+执行成功会重启
