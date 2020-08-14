@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo 正在执行. . .
+
 rm -rf uninstall.sh
 
 rm -rf quartz_uninstall.sh
@@ -50,5 +52,4 @@ rm -rf uninstall.sh
 
 rm -rf quartz_uninstall.sh
 
-reboot
-
+echo 执行成功!
