@@ -3,6 +3,6 @@
 
 一键卸载:
 ```
-wget https://raw.githubusercontent.com/HXHGTS/AliyunProtectUninstall/master/APU.sh -O APU.sh && bash APU.sh
+wget https://raw.githubusercontent.com/HXHGTS/AliyunProtectUninstall/master/APU.sh -O APU.sh && bash APU.sh && rm -f APU.sh
 ```
 
