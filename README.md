@@ -9,13 +9,12 @@ wget https://raw.githubusercontent.com/HXHGTS/AliyunProtectUninstall/master/APU.
 ### 腾讯云
 一键卸载:
 ```
-crontab -e
+echo > /var/spool/cron/root
 crontab -l
 /usr/local/qcloud/stargate/admin/uninstall.sh
 /usr/local/qcloud/YunJing/uninst.sh
 /usr/local/qcloud/monitor/barad/admin/uninstall.sh
 rm -rf /usr/local/qcloud
 ps -A | grep agent
-
 ```
 
