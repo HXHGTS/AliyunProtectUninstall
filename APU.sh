@@ -44,6 +44,8 @@ iptables -I INPUT -s 140.205.225.205/32 -j DROP
 
 rm -rf /usr/local/cloudmonitor
 
+rm -rf /usr/local/share/aliyun-assist
+
 rm -rf uninstall.sh
 
 rm -rf quartz_uninstall.sh
