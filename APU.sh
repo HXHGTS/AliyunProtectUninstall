@@ -2,13 +2,13 @@
 
 echo 正在执行. . .
 
-wget https://raw.githubusercontent.com/HXHGTS/AliyunProtectUninstall/master/uninstall.sh -O uninstall.sh
+wget https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/uninstall.sh -O uninstall.sh
 
 chmod +x uninstall.sh
 
 ./uninstall.sh
 
-wget https://raw.githubusercontent.com/HXHGTS/AliyunProtectUninstall/master/quartz_uninstall.sh -O quartz_uninstall.sh
+wget https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/quartz_uninstall.sh -O quartz_uninstall.sh
 
 chmod +x quartz_uninstall.sh
 
