@@ -2,6 +2,8 @@
 
 echo 正在执行. . .
 
+yum install iptables-services -y
+
 wget https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/uninstall.sh -O uninstall.sh
 
 chmod +x uninstall.sh
