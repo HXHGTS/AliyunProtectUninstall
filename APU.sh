@@ -38,6 +38,8 @@ iptables -I INPUT -s 140.205.225.206/32 -j DROP
 
 iptables -I INPUT -s 140.205.225.205/32 -j DROP
 
+service iptables restart
+
 /usr/local/cloudmonitor/wrapper/bin/cloudmonitor.sh stop
 
 /usr/local/cloudmonitor/wrapper/bin/cloudmonitor.sh remove
