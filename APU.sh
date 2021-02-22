@@ -4,17 +4,9 @@ echo 正在执行. . .
 
 yum install iptables-services -y
 
-wget https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/uninstall.sh -O uninstall.sh
+curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/uninstall.sh | sh
 
-chmod +x uninstall.sh
-
-./uninstall.sh
-
-wget https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/quartz_uninstall.sh -O quartz_uninstall.sh
-
-chmod +x quartz_uninstall.sh
-
-./quartz_uninstall.sh
+curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/quartz_uninstall.sh | sh
 
 pkill aliyun-service
 
@@ -49,9 +41,5 @@ service iptables restart
 rm -rf /usr/local/cloudmonitor
 
 rm -rf /usr/local/share/aliyun-assist
-
-rm -rf uninstall.sh
-
-rm -rf quartz_uninstall.sh
 
 echo 执行成功!
