@@ -14,6 +14,8 @@ crontab -l
 
 rm -rf /usr/local/qcloud
 
+kill 1404
+
 ps -A | grep agent
 
 echo 执行成功!
