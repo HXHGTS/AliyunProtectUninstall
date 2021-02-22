@@ -5,11 +5,11 @@
 ### 阿里云
 一键卸载:
 
-`wget https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/APU.sh -O APU.sh && bash APU.sh && rm -f APU.sh`
+`curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/APU.sh | sh`
 
 ### 腾讯云
 一键卸载:
 
-`wget https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/TPU.sh -O TPU.sh && bash TPU.sh && rm -f TPU.sh`
+`curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/TPU.sh | sh`
 
 
