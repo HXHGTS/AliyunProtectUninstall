@@ -10,7 +10,9 @@ curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/quartz_unins
 
 pkill aliyun-service
 
-rm -fr /etc/init.d/agentwatch /usr/sbin/aliyun-service
+rm -rf /etc/init.d/agentwatch
+
+rm -rf /usr/sbin/aliyun-service
 
 rm -rf /usr/local/aegis*
 
@@ -31,6 +33,8 @@ iptables -I INPUT -s 140.205.225.183/32 -j DROP
 iptables -I INPUT -s 140.205.225.206/32 -j DROP
 
 iptables -I INPUT -s 140.205.225.205/32 -j DROP
+
+service iptables save
 
 service iptables restart
 
