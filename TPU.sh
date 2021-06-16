@@ -16,6 +16,8 @@ rm -rf /usr/local/qcloud
 
 kill 1404
 
+kill 1274
+
 ps -A | grep agent
 
 echo 执行成功!
