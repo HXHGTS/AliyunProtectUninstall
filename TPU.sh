@@ -6,6 +6,10 @@ echo > /var/spool/cron/root
 
 crontab -l
 
+kill 1404
+
+kill 1274
+
 /usr/local/qcloud/stargate/admin/uninstall.sh
 
 /usr/local/qcloud/YunJing/uninst.sh
@@ -13,10 +17,6 @@ crontab -l
 /usr/local/qcloud/monitor/barad/admin/uninstall.sh
 
 rm -rf /usr/local/qcloud
-
-kill 1404
-
-kill 1274
 
 ps -A | grep agent
 
