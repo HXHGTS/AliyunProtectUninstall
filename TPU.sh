@@ -6,6 +6,10 @@ echo > /var/spool/cron/root
 
 crontab -l
 
+kill 1288
+
+kill 1338
+
 kill 1404
 
 kill 1274
