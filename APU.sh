@@ -2,7 +2,7 @@
 
 echo 正在执行. . .
 
-yum install iptables-services -y
+yum install iptables-services iptables-persistent -y
 
 curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/uninstall.sh | sh
 
@@ -34,7 +34,7 @@ iptables -I INPUT -s 140.205.225.206/32 -j DROP
 
 iptables -I INPUT -s 140.205.225.205/32 -j DROP
 
-service iptables save
+/etc/init.d/iptables-persistent save
 
 service iptables restart
 
