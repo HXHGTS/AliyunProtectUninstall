@@ -6,22 +6,14 @@ echo > /var/spool/cron/root
 
 crontab -l
 
-kill 1288
+systemctl stop tat_agent
 
-kill 1338
+systemctl disable tat_agent
 
-kill 1404
+rm -rf /etc/systemd/system/tat_agent.service
 
-kill 1274
-
-/usr/local/qcloud/stargate/admin/uninstall.sh
-
-/usr/local/qcloud/YunJing/uninst.sh
-
-/usr/local/qcloud/monitor/barad/admin/uninstall.sh
-
-rm -rf /usr/local/qcloud
-
-ps -A | grep agent
+rm -rf /usr/local/qcloud 
+ 
+kill $(ps -A | grep agent)
 
 echo 执行成功!
