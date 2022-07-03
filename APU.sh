@@ -2,13 +2,13 @@
 
 echo 正在执行. . .
 
-systemctl stop aliyun
-
-systemctl disable aliyun
-
 systemctl stop AssistDaemon
 
 systemctl disable AssistDaemon
+
+systemctl stop aliyun
+
+systemctl disable aliyun
 
 systemctl stop cloud-init
 
