@@ -2,47 +2,35 @@
 
 echo 正在执行. . .
 
-yum install iptables-services iptables-persistent -y
+systemctl stop aliyun
 
-curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/uninstall.sh | sh
+systemctl disable aliyun
 
-curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/AliyunProtectUninstall/quartz_uninstall.sh | sh
+systemctl stop AssistDaemon
 
-pkill aliyun-service
+systemctl disable AssistDaemon
 
-rm -rf /etc/init.d/agentwatch
+systemctl stop cloud-init
 
-rm -rf /usr/sbin/aliyun-service
+systemctl disable cloud-init
 
-rm -rf /usr/local/aegis*
+systemctl stop cloud-final
 
-iptables -I INPUT -s 140.205.201.0/28 -j DROP
+systemctl disable cloud-final
 
-iptables -I INPUT -s 140.205.201.16/29 -j DROP
+systemctl stop cloud-config
 
-iptables -I INPUT -s 140.205.201.32/28 -j DROP
+systemctl disable cloud-config
 
-iptables -I INPUT -s 140.205.225.192/29 -j DROP
+systemctl stop cloud-init-local
 
-iptables -I INPUT -s 140.205.225.200/30 -j DROP
+systemctl disable cloud-init-local
 
-iptables -I INPUT -s 140.205.225.184/29 -j DROP
+bash /usr/local/share/aliyun-assist/2.2.3.282/init/uninstall
 
-iptables -I INPUT -s 140.205.225.183/32 -j DROP
+bash /usr/local/share/aliyun-assist/2.2.3.282/init/clean
 
-iptables -I INPUT -s 140.205.225.206/32 -j DROP
-
-iptables -I INPUT -s 140.205.225.205/32 -j DROP
-
-/etc/init.d/iptables-persistent save
-
-service iptables restart
-
-/usr/local/cloudmonitor/wrapper/bin/cloudmonitor.sh stop
-
-/usr/local/cloudmonitor/wrapper/bin/cloudmonitor.sh remove
-
-rm -rf /usr/local/cloudmonitor
+rm -rf /usr/local/share/assist-daemon
 
 rm -rf /usr/local/share/aliyun-assist
 
